@@ -7,56 +7,59 @@
     </dependencies>
     <scenes>
         <!--Alarms-->
-        <scene sceneID="hNz-n2-bh7">
+        <scene sceneID="D54-C4-uSj">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                <tableViewController id="Bb6-5J-M2f" customClass="AlarmTableViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="69" sectionHeaderHeight="18" sectionFooterHeight="18" id="LJ1-tB-o8o">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QN-Ec-4vy">
-                                <rect key="frame" x="451" y="497" width="129" height="59"/>
-                                <state key="normal" title="New Alarm"/>
-                                <connections>
-                                    <segue destination="IFk-Yf-jL0" kind="show" id="DaQ-i4-Yzr"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Alarms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze0-So-s46">
-                                <rect key="frame" x="280" y="37" width="158" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ze0-So-s46" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="25" id="5zV-ii-p7n"/>
-                            <constraint firstItem="0QN-Ec-4vy" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="500" id="7Tk-jA-EDz"/>
-                            <constraint firstItem="0QN-Ec-4vy" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="500" id="IXd-wv-OfE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ze0-So-s46" secondAttribute="trailing" constant="50" id="M8H-9J-cyd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0QN-Ec-4vy" secondAttribute="trailing" constant="10" id="sT4-8J-Cjo"/>
-                            <constraint firstItem="ze0-So-s46" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="50" id="zfD-na-6rR"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Alarms" image="first" id="acW-dT-cKf"/>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="addNewAlarm" destination="0QN-Ec-4vy" id="LEP-tf-R5P"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GgQ-0C-hoW">
+                            <rect key="frame" x="0.0" y="136.5" width="600" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="New Alarm"/>
+                            <connections>
+                                <action selector="addAlarm:" destination="Bb6-5J-M2f" eventType="touchUpInside" id="Iag-KJ-6p6"/>
+                                <segue destination="IFk-Yf-jL0" kind="show" identifier="AddAlarm" id="f02-KI-Fko"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" textLabel="fpI-Bm-ZJd" rowHeight="69" style="IBUITableViewCellStyleDefault" id="pWa-UB-S45">
+                                <rect key="frame" x="0.0" y="49.5" width="600" height="69"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWa-UB-S45" id="aIs-dW-eh6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="68.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Dynamic Contents: Index Path &amp; Cell Reuse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fpI-Bm-ZJd">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Bb6-5J-M2f" id="6Lk-jC-xcc"/>
+                            <outlet property="delegate" destination="Bb6-5J-M2f" id="zDD-Ta-Y3m"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Alarms" image="first" id="mI2-Yz-mlo"/>
+                    <navigationItem key="navigationItem" id="vzV-Df-qNi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHP-w5-dd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-200"/>
+            <point key="canvasLocation" x="976" y="-608"/>
         </scene>
-        <!--View Controller-->
+        <!--Select Time View Controller-->
         <scene sceneID="2Db-6g-GH6">
             <objects>
-                <viewController id="IFk-Yf-jL0" sceneMemberID="viewController">
+                <viewController id="IFk-Yf-jL0" customClass="SelectTimeViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbk-iq-kXz"/>
                         <viewControllerLayoutGuide type="bottom" id="Ye5-gm-Mtg"/>
@@ -65,48 +68,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-Eg-xDt">
-                                <rect key="frame" x="36" y="54" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="2bs-zd-wdk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-YX-uBt">
-                                <rect key="frame" x="270" y="340" width="72" height="30"/>
-                                <state key="normal" title="Add Alarm"/>
-                            </button>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FDM-oc-Lw3">
-                                <rect key="frame" x="1" y="98" width="600" height="216"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FDM-oc-Lw3">
+                                <rect key="frame" x="0.0" y="102" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="490308638.19263399">
                                     <!--2016-07-15 20:50:38 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="selectTime:" destination="IFk-Yf-jL0" eventType="valueChanged" id="QHM-xz-ACh"/>
+                                </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-Eg-xDt">
+                                <rect key="frame" x="35" y="64" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="8PD-sf-YAf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hov-3n-Elw">
+                                <rect key="frame" x="255" y="45" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-YX-uBt">
+                                <rect key="frame" x="270" y="340" width="72" height="30"/>
+                                <state key="normal" title="Add Alarm"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Hov-3n-Elw" firstAttribute="top" secondItem="lbk-iq-kXz" secondAttribute="bottom" constant="10" id="BWN-IO-Q73"/>
                             <constraint firstItem="JCP-Eg-xDt" firstAttribute="top" secondItem="lbk-iq-kXz" secondAttribute="bottom" constant="25" id="CDK-C1-gjS"/>
                             <constraint firstItem="ih0-YX-uBt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="Jwg-sJ-nSM"/>
-                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="25" id="KnF-jo-sJM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FDM-oc-Lw3" secondAttribute="trailing" constant="10" id="Ox0-ym-ygB"/>
+                            <constraint firstItem="FDM-oc-Lw3" firstAttribute="top" secondItem="Hov-3n-Elw" secondAttribute="bottom" constant="10" id="XWh-Jl-ifB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hov-3n-Elw" secondAttribute="trailing" constant="10" id="dax-4t-yqb"/>
+                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="top" secondItem="lbk-iq-kXz" secondAttribute="bottom" constant="10" id="fiS-OO-Ek7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ih0-YX-uBt" secondAttribute="trailing" constant="10" id="tXe-0L-D2Y"/>
+                            <constraint firstItem="ih0-YX-uBt" firstAttribute="top" secondItem="FDM-oc-Lw3" secondAttribute="bottom" constant="22" id="tls-rT-CcY"/>
                             <constraint firstItem="FDM-oc-Lw3" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="vxt-7I-wEn"/>
+                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="wOP-Wq-YFp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedTime" destination="Hov-3n-Elw" id="ip0-hi-VzY"/>
+                        <outlet property="timePicker" destination="FDM-oc-Lw3" id="Dzb-vN-JcR"/>
+                        <segue destination="Bb6-5J-M2f" kind="show" id="ADL-2u-7ul"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8s-Sc-fa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795" y="-166"/>
-        </scene>
-        <!--Sounds-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sounds" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="533"/>
+            <point key="canvasLocation" x="2487" y="-1124"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EqN-wB-QTF">
@@ -123,16 +135,10 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz4-VP-tQ1">
                                 <rect key="frame" x="510" y="41" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="mOJ-X9-Qrx"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbn-5h-5t9">
                                 <rect key="frame" x="34" y="41" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="8rJ-Kc-sve" kind="show" id="gbp-m7-LBZ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3J-1a-Smu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827" y="543"/>
+            <point key="canvasLocation" x="1351" y="1033"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -160,17 +166,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Bb6-5J-M2f" kind="relationship" relationship="viewControllers" id="pyt-Mm-wOs"/>
+                        <segue destination="DWa-KO-HUf" kind="relationship" relationship="viewControllers" id="5Uv-VQ-hqN"/>
+                        <segue destination="Qsq-Es-zEL" kind="relationship" relationship="viewControllers" id="DQ6-ZP-qba"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="2"/>
+            <point key="canvasLocation" x="70" y="-608"/>
         </scene>
         <!--Settings-->
         <scene sceneID="7Vx-TO-haP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdf-d0-p8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Settings" id="DWa-KO-HUf" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9iu-sX-6Wb"/>
@@ -181,10 +189,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="r7s-At-fBX"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gdf-d0-p8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="697"/>
+            <point key="canvasLocation" x="-288" y="255"/>
+        </scene>
+        <!--Sounds-->
+        <scene sceneID="LBT-CF-P9Y">
+            <objects>
+                <collectionViewController id="Qsq-Es-zEL" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4VF-vS-RqD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rKn-Us-kk3">
+                            <size key="itemSize" width="328" height="270"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xGK-Gx-vy7">
+                                <rect key="frame" x="136" y="0.0" width="328" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="270"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bh-UE-ceb">
+                                            <rect key="frame" x="0.0" y="8" width="145" height="62"/>
+                                            <state key="normal" title="New Sound"/>
+                                            <connections>
+                                                <segue destination="ubw-1t-FwG" kind="show" id="HNC-1G-IjS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Qsq-Es-zEL" id="pdH-Pq-eMj"/>
+                            <outlet property="delegate" destination="Qsq-Es-zEL" id="luq-If-7H6"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Sounds" image="second" id="XrL-rW-mRg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ye-kb-DxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="250"/>
         </scene>
     </scenes>
     <resources>
@@ -192,6 +246,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mOJ-X9-Qrx"/>
+        <segue reference="ADL-2u-7ul"/>
     </inferredMetricsTieBreakers>
 </document>

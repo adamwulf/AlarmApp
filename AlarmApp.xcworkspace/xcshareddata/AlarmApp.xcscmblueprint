@@ -1,0 +1,22 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3DDE171C2A6FC5AA4586EE7A6C77964085B0BF9E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9108EE20-812F-4236-BBCA-F9B5D2BF0749",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3DDE171C2A6FC5AA4586EE7A6C77964085B0BF9E" : "TipPro\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AlarmApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AlarmApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kk6rpt\/TipPro.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3DDE171C2A6FC5AA4586EE7A6C77964085B0BF9E"
+    }
+  ]
+}

@@ -9,25 +9,22 @@
 import UIKit
 
 class SelectTimeViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //self.view.backgroundColor = UIColor.blueColor()
+    }
     
     var time: String = ""
     
     @IBOutlet weak var timePicker: UIDatePicker!
     
-    @IBOutlet weak var selectedTime: UILabel!
-    
-    @IBAction func selectTime(sender: AnyObject) {
-        var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        var strTime = dateFormatter.stringFromDate(timePicker.date)
-        self.selectedTime.text = strTime
-    }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "AddAlarm" {
+        if segue.identifier == "time" {
             let alarmTableViewController = segue.destinationViewController as! AlarmTableViewController
-            
-            alarmTableViewController.receivedString = timePicker.date as! String
+            let timeString = NSDateFormatter.localizedStringFromDate(timePicker.date, dateStyle: .NoStyle, timeStyle: .ShortStyle)
+            alarmTableViewController.data.append(timeString)
+            alarmTableViewController.tableView.reloadData()
         }
     }
 }

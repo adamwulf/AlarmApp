@@ -10,6 +10,7 @@ target 'AlarmApp' do
 	pod ‘Alamofire’
 	pod ‘SnapKit’
 	pod ‘Parse’
+	pod ‘RealmSwift’
 
   target 'AlarmAppTests' do
     inherit! :search_paths

@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3667231D4C286200C4D664 /* NameRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */; };
 		0F3EE8491D343B1500484614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE8481D343B1500484614 /* AppDelegate.swift */; };
-		0F3EE84B1D343B1500484614 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE84A1D343B1500484614 /* FirstViewController.swift */; };
-		0F3EE84D1D343B1500484614 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE84C1D343B1500484614 /* SecondViewController.swift */; };
+		0F3EE84D1D343B1500484614 /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */; };
 		0F3EE8501D343B1500484614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE84E1D343B1500484614 /* Main.storyboard */; };
 		0F3EE8521D343B1500484614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE8511D343B1500484614 /* Assets.xcassets */; };
 		0F3EE8551D343B1500484614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE8531D343B1500484614 /* LaunchScreen.storyboard */; };
 		0F3EE8601D343B1500484614 /* AlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE85F1D343B1500484614 /* AlarmAppTests.swift */; };
 		0F3EE86B1D343B1500484614 /* AlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE86A1D343B1500484614 /* AlarmAppUITests.swift */; };
-		0FBF67441D39560700F40EE4 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF67431D39560700F40EE4 /* SCLAlertView.swift */; };
+		0F4056CA1D52978600FB59C3 /* AlarmAppSoundIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */; };
+		0FD9EBF71D3EC08A00B1471F /* AlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EBF61D3EC08A00B1471F /* AlarmTableViewController.swift */; };
+		0FD9EBFF1D40434700B1471F /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EBFE1D40434700B1471F /* SelectTimeViewController.swift */; };
+		0FD9EC031D42E61100B1471F /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EC021D42E61100B1471F /* UIScrollView+EmptyDataSet.m */; };
+		0FD9EC0A1D468BBD00B1471F /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD9EC091D468BBD00B1471F /* clock.png */; };
+		0FD9EC0C1D46D4DB00B1471F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD9EC0B1D46D4DA00B1471F /* AVFoundation.framework */; };
+		0FD9EC0E1D46DD1900B1471F /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */; };
 		5A5B523225CFB1F4BF742874 /* Pods_AlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B13F64AFFD1B88B93445A9 /* Pods_AlarmAppUITests.framework */; };
 		84DC1409A1146CC567E41916 /* Pods_AlarmApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B75F745B43F655D94170FCA /* Pods_AlarmApp.framework */; };
 		D601971D5AC74EA6AC020CAE /* Pods_AlarmAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0589B7B80C748F74E6A89164 /* Pods_AlarmAppTests.framework */; };
@@ -42,10 +48,10 @@
 		0589B7B80C748F74E6A89164 /* Pods_AlarmAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0703C20159B8A42E43326C37 /* Pods-AlarmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmApp/Pods-AlarmApp.release.xcconfig"; sourceTree = "<group>"; };
 		0B75F745B43F655D94170FCA /* Pods_AlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameRecordingViewController.swift; sourceTree = "<group>"; };
 		0F3EE8451D343B1500484614 /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3EE8481D343B1500484614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F3EE84A1D343B1500484614 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0F3EE84C1D343B1500484614 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		0F3EE84F1D343B1500484614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F3EE8511D343B1500484614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3EE8541D343B1500484614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,7 +62,15 @@
 		0F3EE8661D343B1500484614 /* AlarmAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3EE86A1D343B1500484614 /* AlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAppUITests.swift; sourceTree = "<group>"; };
 		0F3EE86C1D343B1500484614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FBF67431D39560700F40EE4 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = "../../../../Downloads/SCLAlertView-Swift-master/SCLAlertView/SCLAlertView.swift"; sourceTree = "<group>"; };
+		0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AlarmAppSoundIcon.png; path = ../../../AlarmAppSoundIcon.png; sourceTree = "<group>"; };
+		0FD9EBF61D3EC08A00B1471F /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
+		0FD9EBFE1D40434700B1471F /* SelectTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
+		0FD9EC001D42E5F000B1471F /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "../../../../Downloads/DZNEmptyDataSet-master/Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		0FD9EC011D42E61000B1471F /* AlarmApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FD9EC021D42E61100B1471F /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+EmptyDataSet.m"; path = "../../../../Downloads/DZNEmptyDataSet-master/Source/UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		0FD9EC091D468BBD00B1471F /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = ../../../clock.png; sourceTree = "<group>"; };
+		0FD9EC0B1D46D4DA00B1471F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundViewController.swift; sourceTree = "<group>"; };
 		22AEBD8347A58C79668CB2BD /* Pods-AlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmAppUITests/Pods-AlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		292F473B8440A53E7480AADB /* Pods-AlarmAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmAppTests/Pods-AlarmAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		37B13F64AFFD1B88B93445A9 /* Pods_AlarmAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD9EC0C1D46D4DB00B1471F /* AVFoundation.framework in Frameworks */,
 				84DC1409A1146CC567E41916 /* Pods_AlarmApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,14 +133,21 @@
 		0F3EE8471D343B1500484614 /* AlarmApp */ = {
 			isa = PBXGroup;
 			children = (
+				0FD9EC021D42E61100B1471F /* UIScrollView+EmptyDataSet.m */,
 				0F3EE8481D343B1500484614 /* AppDelegate.swift */,
-				0F3EE84A1D343B1500484614 /* FirstViewController.swift */,
-				0F3EE84C1D343B1500484614 /* SecondViewController.swift */,
-				0FBF67431D39560700F40EE4 /* SCLAlertView.swift */,
+				0FD9EBF61D3EC08A00B1471F /* AlarmTableViewController.swift */,
+				0FD9EBFE1D40434700B1471F /* SelectTimeViewController.swift */,
+				0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */,
+				0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */,
 				0F3EE84E1D343B1500484614 /* Main.storyboard */,
+				0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */,
+				0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */,
 				0F3EE8511D343B1500484614 /* Assets.xcassets */,
 				0F3EE8531D343B1500484614 /* LaunchScreen.storyboard */,
 				0F3EE8561D343B1500484614 /* Info.plist */,
+				0FD9EC001D42E5F000B1471F /* UIScrollView+EmptyDataSet.h */,
+				0FD9EC011D42E61000B1471F /* AlarmApp-Bridging-Header.h */,
+				0FD9EC091D468BBD00B1471F /* clock.png */,
 			);
 			path = AlarmApp;
 			sourceTree = "<group>";
@@ -164,6 +186,7 @@
 		F057A45736863ADC35F1BF6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FD9EC0B1D46D4DA00B1471F /* AVFoundation.framework */,
 				0B75F745B43F655D94170FCA /* Pods_AlarmApp.framework */,
 				0589B7B80C748F74E6A89164 /* Pods_AlarmAppTests.framework */,
 				37B13F64AFFD1B88B93445A9 /* Pods_AlarmAppUITests.framework */,
@@ -266,6 +289,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"pt-BR",
 			);
 			mainGroup = 0F3EE83C1D343B1500484614;
 			productRefGroup = 0F3EE8461D343B1500484614 /* Products */;
@@ -284,8 +309,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD9EC0A1D468BBD00B1471F /* clock.png in Resources */,
 				0F3EE8551D343B1500484614 /* LaunchScreen.storyboard in Resources */,
 				0F3EE8521D343B1500484614 /* Assets.xcassets in Resources */,
+				0F4056CA1D52978600FB59C3 /* AlarmAppSoundIcon.png in Resources */,
 				0F3EE8501D343B1500484614 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,10 +461,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F3EE84D1D343B1500484614 /* SecondViewController.swift in Sources */,
+				0F3EE84D1D343B1500484614 /* SoundTableViewController.swift in Sources */,
 				0F3EE8491D343B1500484614 /* AppDelegate.swift in Sources */,
-				0FBF67441D39560700F40EE4 /* SCLAlertView.swift in Sources */,
-				0F3EE84B1D343B1500484614 /* FirstViewController.swift in Sources */,
+				0FD9EC0E1D46DD1900B1471F /* RecordSoundViewController.swift in Sources */,
+				0FD9EBF71D3EC08A00B1471F /* AlarmTableViewController.swift in Sources */,
+				0FD9EBFF1D40434700B1471F /* SelectTimeViewController.swift in Sources */,
+				0FD9EC031D42E61100B1471F /* UIScrollView+EmptyDataSet.m in Sources */,
+				0F3667231D4C286200C4D664 /* NameRecordingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,13 +612,20 @@
 			baseConfigurationReference = D1C4A18369D0F692E02EBBD2 /* Pods-AlarmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AlarmApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.graceding.AlarmApp;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Realm/core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.graceding.AlarmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmApp/AlarmApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -597,13 +634,19 @@
 			baseConfigurationReference = 0703C20159B8A42E43326C37 /* Pods-AlarmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AlarmApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.graceding.AlarmApp;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Realm/core",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.graceding.AlarmApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlarmApp/AlarmApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

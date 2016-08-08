@@ -16,6 +16,7 @@
 		0F3EE8601D343B1500484614 /* AlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE85F1D343B1500484614 /* AlarmAppTests.swift */; };
 		0F3EE86B1D343B1500484614 /* AlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE86A1D343B1500484614 /* AlarmAppUITests.swift */; };
 		0F4056CA1D52978600FB59C3 /* AlarmAppSoundIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */; };
+		0F4062121D56C25700FB59C3 /* TimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4062111D56C25700FB59C3 /* TimeExtension.swift */; };
 		0FD9EBF71D3EC08A00B1471F /* AlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EBF61D3EC08A00B1471F /* AlarmTableViewController.swift */; };
 		0FD9EBFF1D40434700B1471F /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EBFE1D40434700B1471F /* SelectTimeViewController.swift */; };
 		0FD9EC031D42E61100B1471F /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EC021D42E61100B1471F /* UIScrollView+EmptyDataSet.m */; };
@@ -63,6 +64,7 @@
 		0F3EE86A1D343B1500484614 /* AlarmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAppUITests.swift; sourceTree = "<group>"; };
 		0F3EE86C1D343B1500484614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AlarmAppSoundIcon.png; path = ../../../AlarmAppSoundIcon.png; sourceTree = "<group>"; };
+		0F4062111D56C25700FB59C3 /* TimeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeExtension.swift; path = ../Pods/TimeExtension.swift; sourceTree = "<group>"; };
 		0FD9EBF61D3EC08A00B1471F /* AlarmTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTableViewController.swift; sourceTree = "<group>"; };
 		0FD9EBFE1D40434700B1471F /* SelectTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTimeViewController.swift; sourceTree = "<group>"; };
 		0FD9EC001D42E5F000B1471F /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EmptyDataSet.h"; path = "../../../../Downloads/DZNEmptyDataSet-master/Source/UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				0FD9EC001D42E5F000B1471F /* UIScrollView+EmptyDataSet.h */,
 				0FD9EC011D42E61000B1471F /* AlarmApp-Bridging-Header.h */,
 				0FD9EC091D468BBD00B1471F /* clock.png */,
+				0F4062111D56C25700FB59C3 /* TimeExtension.swift */,
 			);
 			path = AlarmApp;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			files = (
 				0F3EE84D1D343B1500484614 /* SoundTableViewController.swift in Sources */,
 				0F3EE8491D343B1500484614 /* AppDelegate.swift in Sources */,
+				0F4062121D56C25700FB59C3 /* TimeExtension.swift in Sources */,
 				0FD9EC0E1D46DD1900B1471F /* RecordSoundViewController.swift in Sources */,
 				0FD9EBF71D3EC08A00B1471F /* AlarmTableViewController.swift in Sources */,
 				0FD9EBFF1D40434700B1471F /* SelectTimeViewController.swift in Sources */,

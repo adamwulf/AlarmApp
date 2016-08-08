@@ -18,8 +18,12 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     @IBOutlet weak var addNewAlarm: UIButton!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView.editing = true
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
         //self.view?.backgroundColor = UIColor.blueColor()
 
         // Uncomment the following line to preserve selection between presentations
@@ -32,7 +36,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,7 +51,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     }
     
     func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
-        let str = "Tap the button below to add your first alarm."
+        let str = "Tap the button above to add your first alarm."
         let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleBody)]
         return NSAttributedString(string: str, attributes: attrs)
     }
@@ -56,7 +60,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         return UIImage(named: "clock")
     }
 
-    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+    /*func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
         let str = "Add Alarm"
         let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleCallout)]
         return NSAttributedString(string: str, attributes: attrs)
@@ -64,7 +68,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
         performSegueWithIdentifier("time", sender: nil)
-    }
+    }*/
     
     
     var data = [String]()
@@ -82,6 +86,16 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         // Configure the cell...
         return cell
 
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            
+            data.removeAtIndex(indexPath.row)
+            
+            tableView.reloadData()
+        }
     }
     
     @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {

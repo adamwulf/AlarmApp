@@ -37,10 +37,9 @@ class SoundTableViewController: UITableViewController {
         
     }
     
-    @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {
+    @IBAction func unwindToSoundTableViewController(segue:UIStoryboardSegue) {
         
     }
-    
     
     /*@IBOutlet weak var btnRecord: UIButton!
     

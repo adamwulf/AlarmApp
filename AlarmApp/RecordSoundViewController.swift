@@ -54,6 +54,9 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     var soundRecorder: AVAudioRecorder!
     var soundPlayer: AVAudioPlayer!
+    var isPlaying = false
+    
+    
     
     var nameOfFile: String = ""
     
@@ -122,6 +125,28 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
             soundRecorder.delegate = self
             
         }
+    }
+    
+    
+    // Play sound with NStimer
+    
+//    class func scheduledTimerWithTimeInterval(
+//        ti: NSTimeInterval,
+//        target aTarget: AnyObject,
+//               selector aSelector: Selector,
+//                        userInfo: AnyObject?,
+//                        repeats yesOrNo: Bool) -> NSTimer {
+//        
+//    }
+    
+    //Get Current Date
+    let currentDate = NSDate()
+    
+    func compareTime() {
+    //Test Extensions in Log
+        NSLog("(Current Short Time String = \(currentDate.toShortTimeString()))")
+        print(currentDate.toShortTimeString)
+     
     }
     
     // MARK:- Prepare AVPlayer
@@ -202,12 +227,5 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
             soundTableViewController.tableView.reloadData()
         }
     }
-
-    
-    
-    
-    
-    
-    
 
 }

@@ -26,5 +26,20 @@ class SelectTimeViewController: UIViewController {
             alarmTableViewController.data.append(timeString)
             alarmTableViewController.tableView.reloadData()
         }
+            
+            
+           /* else {
+            let recordSoundViewController = segue.destinationViewController as! RecordSoundViewController
+            let currentDate = NSDate()
+            NSLog("(Current Short Time String = \(currentDate.toShortTimeString()))")
+            print(currentDate.toShortTimeString)
+            
+            if recordSoundViewController.currentDate == NSDateFormatter.localizedStringFromDate(timePicker.date, dateStyle: .NoStyle, timeStyle: .ShortStyle) {
+                print ("yes")
+                
+            }
+        }*/
     }
+
+    
 }

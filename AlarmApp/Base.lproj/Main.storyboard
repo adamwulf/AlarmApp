@@ -17,15 +17,16 @@
                         <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pFA-KX-zws">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="Add Alarm"/>
                             <connections>
                                 <segue destination="IFk-Yf-jL0" kind="show" id="vRf-Dj-hiB"/>
                             </connections>
                         </button>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jr7-qF-ZDl">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mU9-Ni-Q3p">
                             <rect key="frame" x="0.0" y="265.5" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Edit"/>
+                            <state key="normal" title="Button"/>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" textLabel="fpI-Bm-ZJd" rowHeight="69" style="IBUITableViewCellStyleDefault" id="pWa-UB-S45">
@@ -200,6 +201,9 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="name" unwindAction="unwindToSoundTableViewController:" id="8wf-pB-izU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -212,6 +216,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig1-tv-Wb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hbc-Ff-wSF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="525" y="255"/>
         </scene>
@@ -341,9 +346,9 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ADL-2u-7ul"/>
-        <segue reference="vRf-Dj-hiB"/>
-        <segue reference="8PD-sf-YAf"/>
+        <segue reference="yjw-lm-xgG"/>
         <segue reference="0qj-Xr-jfH"/>
+        <segue reference="vRf-Dj-hiB"/>
+        <segue reference="ADL-2u-7ul"/>
     </inferredMetricsTieBreakers>
 </document>

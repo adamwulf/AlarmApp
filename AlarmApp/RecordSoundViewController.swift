@@ -39,9 +39,9 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:handleCancel))
         alert.addAction(UIAlertAction(title: "Done", style: .Default, handler:{ (UIAlertAction) in
             print("Done !!")
-            let nameOfFile = alert.textFields![0].text
+            var nameOfFile = alert.textFields![0].text
             self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-        
+            NSNotificationCenter.defaultCenter().postNotificationName("userClickOnSave", object: nameOfFile)
             self.nameOfRecording = nameOfFile!
             
             
@@ -222,8 +222,9 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "name" {
+            print("yes")
             let soundTableViewController = segue.destinationViewController as! SoundTableViewController
-            soundTableViewController.data.append(nameOfRecording)
+            soundTableViewController.data.append(nameOfFile)
             soundTableViewController.tableView.reloadData()
         }
     }

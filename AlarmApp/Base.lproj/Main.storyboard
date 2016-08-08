@@ -346,9 +346,9 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yjw-lm-xgG"/>
-        <segue reference="0qj-Xr-jfH"/>
+        <segue reference="8PD-sf-YAf"/>
         <segue reference="vRf-Dj-hiB"/>
         <segue reference="ADL-2u-7ul"/>
+        <segue reference="0qj-Xr-jfH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,22 +15,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pFA-KX-zws">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="Add Alarm"/>
                             <connections>
+                                <action selector="test:" destination="Bb6-5J-M2f" eventType="touchUpInside" id="kW5-xO-Mj2"/>
                                 <segue destination="IFk-Yf-jL0" kind="show" id="vRf-Dj-hiB"/>
                             </connections>
                         </button>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mU9-Ni-Q3p">
-                            <rect key="frame" x="0.0" y="265.5" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" textLabel="fpI-Bm-ZJd" rowHeight="69" style="IBUITableViewCellStyleDefault" id="pWa-UB-S45">
-                                <rect key="frame" x="0.0" y="178.5" width="600" height="69"/>
+                                <rect key="frame" x="0.0" y="179.5" width="600" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pWa-UB-S45" id="aIs-dW-eh6">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="68.5"/>
@@ -62,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHP-w5-dd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="-522"/>
+            <point key="canvasLocation" x="976" y="-608"/>
         </scene>
         <!--Select Time View Controller-->
         <scene sceneID="2Db-6g-GH6">
@@ -167,26 +163,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U1i-bD-fHb">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JCe-bI-bcS">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Cancel"/>
-                            <connections>
-                                <segue destination="49e-Tb-3d3" kind="show" id="T8v-7c-i5h"/>
-                            </connections>
-                        </button>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aM4-DR-Jcm">
-                            <rect key="frame" x="0.0" y="300" width="600" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="New Sound"/>
                             <connections>
-                                <segue destination="Lk6-Kj-4He" kind="show" id="tzo-eE-nHh"/>
+                                <segue destination="Lk6-Kj-4He" kind="show" id="4cE-EM-TQn"/>
                             </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundCell" rowHeight="228" id="cbW-Bi-wqR">
-                                <rect key="frame" x="0.0" y="72" width="600" height="228"/>
+                                <rect key="frame" x="0.0" y="118" width="600" height="228"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cbW-Bi-wqR" id="1DX-aT-Ebh">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="227.5"/>
@@ -202,7 +190,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="name" unwindAction="unwindToSoundTableViewController:" id="8wf-pB-izU"/>
+                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="sound" unwindAction="unwindToSoundTableViewController:" id="8wf-pB-izU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -236,7 +224,7 @@
                                 <rect key="frame" x="26" y="28" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="sK6-Fn-JRx" kind="show" id="0qj-Xr-jfH"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="ayU-Bi-PEB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-4n-2Qw">
@@ -282,64 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyD-pp-JWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="266"/>
-        </scene>
-        <!--Name Recording View Controller-->
-        <scene sceneID="DNc-u2-vAo">
-            <objects>
-                <viewController id="jrb-VY-MHs" customClass="NameRecordingViewController" customModule="AlarmApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mAi-sc-gzS"/>
-                        <viewControllerLayoutGuide type="bottom" id="chy-xS-JxC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jnQ-3U-6qR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzH-ha-khA" userLabel="name">
-                                <rect key="frame" x="252" y="306" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msL-ct-MOH">
-                                <rect key="frame" x="44" y="33" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghs-wR-VE8">
-                                <rect key="frame" x="523" y="33" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveRecording:" destination="jrb-VY-MHs" eventType="touchUpInside" id="JOO-51-R3z"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name your recording." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-iI-6We">
-                                <rect key="frame" x="217" y="252" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ghs-wR-VE8" secondAttribute="trailing" constant="25" id="5o6-aC-t5i"/>
-                            <constraint firstItem="msL-ct-MOH" firstAttribute="top" secondItem="mAi-sc-gzS" secondAttribute="bottom" constant="25" id="5xr-gK-U1V"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wzH-ha-khA" secondAttribute="trailing" constant="25" id="8GM-df-ete"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8DW-iI-6We" secondAttribute="trailing" constant="25" id="J4S-Vx-tFr"/>
-                            <constraint firstItem="Ghs-wR-VE8" firstAttribute="top" secondItem="mAi-sc-gzS" secondAttribute="bottom" constant="25" id="PJB-k4-igv"/>
-                            <constraint firstItem="wzH-ha-khA" firstAttribute="leading" secondItem="jnQ-3U-6qR" secondAttribute="leadingMargin" constant="25" id="TYI-Vs-VPC"/>
-                            <constraint firstItem="wzH-ha-khA" firstAttribute="top" secondItem="8DW-iI-6We" secondAttribute="bottom" constant="25" id="UjX-cD-blx"/>
-                            <constraint firstItem="8DW-iI-6We" firstAttribute="leading" secondItem="jnQ-3U-6qR" secondAttribute="leadingMargin" constant="25" id="XXr-Ib-K3z"/>
-                            <constraint firstItem="msL-ct-MOH" firstAttribute="leading" secondItem="jnQ-3U-6qR" secondAttribute="leadingMargin" constant="25" id="cgd-Ff-im7"/>
-                            <constraint firstItem="8DW-iI-6We" firstAttribute="top" secondItem="mAi-sc-gzS" secondAttribute="bottom" constant="25" id="eDe-rq-aqb"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="nameRecording" destination="wzH-ha-khA" id="Znx-3n-jr3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KSf-ft-YMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2075" y="266"/>
+            <point key="canvasLocation" x="1313" y="255"/>
         </scene>
     </scenes>
     <resources>
@@ -349,6 +280,5 @@
         <segue reference="8PD-sf-YAf"/>
         <segue reference="vRf-Dj-hiB"/>
         <segue reference="ADL-2u-7ul"/>
-        <segue reference="0qj-Xr-jfH"/>
     </inferredMetricsTieBreakers>
 </document>

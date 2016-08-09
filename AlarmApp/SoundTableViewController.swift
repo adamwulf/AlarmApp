@@ -53,13 +53,16 @@ class SoundTableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-
     
-    @IBAction func unwindToSoundTableViewController(segue: UIStoryboardSegue) {
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        NSLog("You selected: \(data[indexPath.row])!")
+        //self.performSegueWithIdentifier("yourIdentifier", sender: self)
+    }
+    
+    @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {
         
     }
-                                                                                                            
-    
+
 }
 
 

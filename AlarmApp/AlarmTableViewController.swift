@@ -18,8 +18,6 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     @IBOutlet weak var addNewAlarm: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tableView.editing = true
@@ -98,7 +96,48 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         }
     }
     
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        NSLog("You selected cell number: \(indexPath.row)!")
+        //self.performSegueWithIdentifier("yourIdentifier", sender: self)
+    }
+    
+    var timer: NSTimer?
+    
+    let currentDate = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    var currentTime: Int {
+        return  calendar.component([.Hour, .Minute], fromDate: currentDate)
+    }
+    let timeString = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .NoStyle, timeStyle: .ShortStyle)
+    
+    
+    @IBAction func test(sender: AnyObject) {
+    
+        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("playAlarm"), userInfo: nil, repeats:true)
+    }
+    
+    var play: Bool = false
+
+    func playAlarm() {
+        var i = 0
+        
+        while i < data.count {
+            play = false
+            
+            if timeString == data[i] {
+                play = true
+                print (timeString)
+            }
+            
+            i = i + 1
+        }
+    }
+    
     @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func UnwindToAlarmTableViewController(segue:UIStoryboardSegue) {
         
     }
 

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import RealmSwift
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
@@ -65,6 +66,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRecorder()
+        saveButton.enabled = false
+        playButton.enabled = false
     }
     
     
@@ -77,13 +80,15 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         } else {
             soundRecorder.stop()
             sender.setTitle("Start Recording", forState: .Normal)
+            saveButton.enabled = true
+            playButton.enabled = true
         }
     }
     
     
     @IBAction func playSound(sender: UIButton) {
         if (sender.titleLabel?.text == "Play Recording"){
-            recordButton.enabled = false
+            //recordButton.enabled = false
             sender.setTitle("Stop Playing", forState: .Normal)
             preparePlayer()
             soundPlayer.play()
@@ -127,18 +132,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         }
     }
     
-    
-    // Play sound with NStimer
-    
-//    class func scheduledTimerWithTimeInterval(
-//        ti: NSTimeInterval,
-//        target aTarget: AnyObject,
-//               selector aSelector: Selector,
-//                        userInfo: AnyObject?,
-//                        repeats yesOrNo: Bool) -> NSTimer {
-//        
-//    }
-    
     //Get Current Date
     let currentDate = NSDate()
     
@@ -169,7 +162,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     }
     
     func audioPlayerDidFinishRecording(player: AVAudioRecorder, successfully flag: Bool) {
-        //saveButton.enabled = true
+        saveButton.enabled = true
         playButton.enabled = true
     }
     
@@ -221,12 +214,24 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "name" {
-            print("yes")
+        if segue.identifier == "sound" {
             let soundTableViewController = segue.destinationViewController as! SoundTableViewController
-            soundTableViewController.data.append(nameOfFile)
-            soundTableViewController.tableView.reloadData()
+            
+            preparePlayer()
+            soundPlayer.play()
+            
+        }
+        
+        else if segue.identifier == "play" {
+            let alarmTableViewController = segue.destinationViewController as! AlarmTableViewController
+            
+            if alarmTableViewController.play == true {
+                preparePlayer()
+                soundPlayer.play()
+                print("called")
+            }
+            
         }
     }
-
+    
 }

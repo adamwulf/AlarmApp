@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F3667231D4C286200C4D664 /* NameRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */; };
 		0F3EE8491D343B1500484614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE8481D343B1500484614 /* AppDelegate.swift */; };
 		0F3EE84D1D343B1500484614 /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */; };
 		0F3EE8501D343B1500484614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE84E1D343B1500484614 /* Main.storyboard */; };
@@ -49,7 +48,6 @@
 		0589B7B80C748F74E6A89164 /* Pods_AlarmAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0703C20159B8A42E43326C37 /* Pods-AlarmApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmApp/Pods-AlarmApp.release.xcconfig"; sourceTree = "<group>"; };
 		0B75F745B43F655D94170FCA /* Pods_AlarmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameRecordingViewController.swift; sourceTree = "<group>"; };
 		0F3EE8451D343B1500484614 /* AlarmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3EE8481D343B1500484614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */,
 				0F3EE84E1D343B1500484614 /* Main.storyboard */,
 				0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */,
-				0F3667221D4C286200C4D664 /* NameRecordingViewController.swift */,
 				0F3EE8511D343B1500484614 /* Assets.xcassets */,
 				0F3EE8531D343B1500484614 /* LaunchScreen.storyboard */,
 				0F3EE8561D343B1500484614 /* Info.plist */,
@@ -471,7 +468,6 @@
 				0FD9EBF71D3EC08A00B1471F /* AlarmTableViewController.swift in Sources */,
 				0FD9EBFF1D40434700B1471F /* SelectTimeViewController.swift in Sources */,
 				0FD9EC031D42E61100B1471F /* UIScrollView+EmptyDataSet.m in Sources */,
-				0F3667231D4C286200C4D664 /* NameRecordingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

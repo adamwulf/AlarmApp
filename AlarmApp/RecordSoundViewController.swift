@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
-import RealmSwift
+//import RealmSwift
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
@@ -45,6 +45,28 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
             NSNotificationCenter.defaultCenter().postNotificationName("userClickOnSave", object: nameOfFile)
             self.nameOfRecording = nameOfFile!
             
+//            URL: getFileURL()
+//            
+//            let path = NSTemporaryDirectory().stringByAppendingString("\(self.nameOfRecording).caf")
+//            print("path is :\(path)")
+//            let filePath = NSURL(fileURLWithPath: path)
+//            
+//            print("filePath is :\(filePath)")
+            
+            let fileManager = NSFileManager.defaultManager()
+            
+            // Copy 'hello.swift' to 'subfolder/hello.swift'
+            
+            do {
+                try fileManager.copyItemAtPath(NSTemporaryDirectory(), toPath: "\(self.nameOfRecording).caf")
+                
+                print("new path: \(fileManager)")
+            }
+            catch let error as NSError {
+                print("Ooops! Something went wrong: \(error)")
+            }
+            
+            
             
             print("Item : \(tField.text)")
         }))
@@ -60,8 +82,6 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     
     var nameOfFile: String = ""
-    
-    let fileName = "demo.caf"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -178,10 +198,11 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     func getFileURL() -> NSURL {
         
-        let path = NSTemporaryDirectory().stringByAppendingString("\(nameOfFile).caf")
+        let path = NSTemporaryDirectory()
         print("path is :\(path)")
         let filePath = NSURL(fileURLWithPath: path)
-        
+    
+        print("filePath is :\(filePath)")
         return filePath
     }
     
@@ -213,25 +234,35 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "sound" {
-            let soundTableViewController = segue.destinationViewController as! SoundTableViewController
-            
-            preparePlayer()
-            soundPlayer.play()
-            
-        }
+    //Rename file with custom name
+    
+    func copyItemAtPath(_ srcPath: String, toPath dstPath: String) throws {
         
-        else if segue.identifier == "play" {
-            let alarmTableViewController = segue.destinationViewController as! AlarmTableViewController
-            
-            if alarmTableViewController.play == true {
-                preparePlayer()
-                soundPlayer.play()
-                print("called")
-            }
-            
-        }
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "sound" {
+//            let soundTableViewController = segue.destinationViewController as! SoundTableViewController
+//            
+//            preparePlayer()
+//            soundPlayer.play()
+//            
+//        }
+        
+//        if segue.identifier == "play" {
+//            let alarmTableViewController = segue.destinationViewController as! AlarmTableViewController
+//            
+//            print("ok")
+//            
+//            if alarmTableViewController.play == true {
+//                preparePlayer()
+//                soundPlayer.play()
+//                print("called")
+//            }
+//            
+//        }
+    }
+   
     
 }

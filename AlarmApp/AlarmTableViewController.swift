@@ -9,10 +9,13 @@
 import UIKit
 import DZNEmptyDataSet
 import RealmSwift
+import AVFoundation
 
 class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
-    let realm = try! Realm()
+//    let realm = try! Realm() {
+//        
+//    }
 
     @IBOutlet weak var timePicker: UIDatePicker!
     
@@ -58,15 +61,15 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         return UIImage(named: "clock")
     }
 
-    /*func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
-        let str = "Add Alarm"
-        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleCallout)]
-        return NSAttributedString(string: str, attributes: attrs)
-    }
-    
-    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
-        performSegueWithIdentifier("time", sender: nil)
-    }*/
+//    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
+//        let str = "Add Alarm"
+//        let attrs = [NSFontAttributeName: UIFont.preferredFontForTextStyle(UIFontTextStyleCallout)]
+//        return NSAttributedString(string: str, attributes: attrs)
+//    }
+//    
+//    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
+//        performSegueWithIdentifier("time", sender: nil)
+//    }
     
     
     var data = [String]()
@@ -98,48 +101,88 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         NSLog("You selected cell number: \(indexPath.row)!")
-        //self.performSegueWithIdentifier("yourIdentifier", sender: self)
+        //self.performSegueWithIdentifier("play", sender: self)
+    }
+    
+    var soundPlayer: AVAudioPlayer!
+    
+    func preparePlayer() {
+        var error: NSError?
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOfURL: getFileURL())
+        } catch let error1 as NSError {
+            error = error1
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            //soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 1.0
+        }
+    }
+    
+    func getFileURL() -> NSURL {
+        
+        let path = NSTemporaryDirectory().stringByAppendingString(".caf")
+        print("path is :\(path)")
+        let filePath = NSURL(fileURLWithPath: path)
+        
+        print("filePath is :\(filePath)")
+        return filePath
     }
     
     var timer: NSTimer?
     
-    let currentDate = NSDate()
+    /*let currentDate = NSDate()
     let calendar = NSCalendar.currentCalendar()
     var currentTime: Int {
         return  calendar.component([.Hour, .Minute], fromDate: currentDate)
-    }
-    let timeString = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .NoStyle, timeStyle: .ShortStyle)
+    }*/
+    
+    var timeString = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .NoStyle, timeStyle: .ShortStyle)
     
     
     @IBAction func test(sender: AnyObject) {
     
-        timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: Selector("playAlarm"), userInfo: nil, repeats:true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("playAlarm"), userInfo: nil, repeats:true)
     }
     
     var play: Bool = false
 
     func playAlarm() {
-        var i = 0
         
-        while i < data.count {
+        timeString = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .NoStyle, timeStyle: .ShortStyle)
+        
+        print ("time: \(NSDate())")
+        
+        for alarm in data {
+            
             play = false
-            
-            if timeString == data[i] {
+            print (alarm)
+            if timeString == alarm {
                 play = true
-                print (timeString)
+                print ("time2: \(timeString)")
+                soundPlayer.play()
+                print("playing")
+                
+                //self.performSegueWithIdentifier("play", sender: self)
             }
-            
-            i = i + 1
+        
         }
     }
+    
     
     @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {
         
     }
     
-    @IBAction func UnwindToAlarmTableViewController(segue:UIStoryboardSegue) {
-        
-    }
+    
+//    
+//    @IBAction func UnwindToAlarmTableViewController(segue: UIStoryboardSegue) {
+//        
+//    }
 
    
 

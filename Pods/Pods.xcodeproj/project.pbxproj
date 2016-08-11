@@ -33,7 +33,6 @@
 		0E265E3E7205D2700890106A7824FC9C /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2092096C6DCAE398913AAA54F66FE5 /* BFTask.m */; };
 		0E5DA393A3114A56151C621281FE77F8 /* PFGeoPointPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4557216638EBA8F54643715020A0CFFB /* PFGeoPointPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0F16649A56FBD0296BE92E912E7EBABB /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = F4C7E154F53D48B84381C43FD1583E5D /* BFExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F4062101D56C22B00FB59C3 /* TimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F40620F1D56C22B00FB59C3 /* TimeExtension.swift */; };
 		0FD61170BA53854C96E08277CC494D8B /* PFURLConstructor.h in Headers */ = {isa = PBXBuildFile; fileRef = 55AFAC1ACCE73FC9D29F524FE7A42104 /* PFURLConstructor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		10080B40606958F2A6F8A3992BEDEDAB /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1C3804DF281B114E3E2C98638F67F4 /* Realm.swift */; };
 		10F0F92FD864C06D9081537931E06303 /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 674A5CC8B54EBFD686CF9BF00CE717FB /* PFAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -749,7 +748,6 @@
 		0EADCEB44708E42799A8288D4865D8E0 /* PFConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFConstants.m; path = Parse/PFConstants.m; sourceTree = "<group>"; };
 		0F10BB2D765C6DBF95AB2F43E9C95152 /* PFObjectState_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectState_Private.h; path = Parse/Internal/Object/State/PFObjectState_Private.h; sourceTree = "<group>"; };
 		0F3EE81DA91B3E7F5279BC897798AF1E /* weak_realm_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = weak_realm_notifier.cpp; path = Realm/ObjectStore/impl/apple/weak_realm_notifier.cpp; sourceTree = "<group>"; };
-		0F40620F1D56C22B00FB59C3 /* TimeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeExtension.swift; sourceTree = "<group>"; };
 		0FA3B7033C5352E4864597B10D731600 /* PFObject+Synchronous.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Synchronous.h"; path = "Parse/PFObject+Synchronous.h"; sourceTree = "<group>"; };
 		0FA725C1D0C4F92EE3F14E4F38E5DDCD /* PFObjectFilePersistenceController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObjectFilePersistenceController.h; path = Parse/Internal/Object/FilePersistence/PFObjectFilePersistenceController.h; sourceTree = "<group>"; };
 		0FAC17D98CE0D3E0B16C74DFB708AF80 /* PFFileStagingController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileStagingController.m; path = Parse/Internal/File/Controller/PFFileStagingController.m; sourceTree = "<group>"; };
@@ -1948,7 +1946,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				0F40620F1D56C22B00FB59C3 /* TimeExtension.swift */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				A84F5427A7F161856F3365E30192E421 /* Frameworks */,
 				24DE07C1AEF07BF00AADC5E3052CBA7C /* Pods */,
@@ -2830,7 +2827,6 @@
 				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
 				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
 				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
-				0F4062101D56C22B00FB59C3 /* TimeExtension.swift in Sources */,
 				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
 				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
 				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,

@@ -21,7 +21,7 @@
                             <state key="normal" title="Add Alarm"/>
                             <connections>
                                 <action selector="test:" destination="Bb6-5J-M2f" eventType="touchUpInside" id="kW5-xO-Mj2"/>
-                                <segue destination="IFk-Yf-jL0" kind="show" id="vRf-Dj-hiB"/>
+                                <segue destination="IFk-Yf-jL0" kind="show" id="3Yh-Pv-bNd"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -190,7 +190,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="sound" unwindAction="unwindToSoundTableViewController:" id="8wf-pB-izU"/>
+                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="play" unwindAction="unwindToAlarmTableViewController:" id="hbB-BW-DJp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -277,8 +277,8 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8PD-sf-YAf"/>
-        <segue reference="vRf-Dj-hiB"/>
+        <segue reference="3Yh-Pv-bNd"/>
         <segue reference="ADL-2u-7ul"/>
+        <segue reference="8PD-sf-YAf"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,42 +9,55 @@
 import Foundation
 import UIKit
 import AVFoundation
-//import RealmSwift
+import RealmSwift
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
     
     var nameOfRecording: String = ""
     
     @IBAction func saveRecording(sender: AnyObject) {
-        var tField: UITextField!
-        
-        func configurationTextField(textField: UITextField!)
-        {
-            print("generating the TextField")
-            textField.placeholder = "Name Your Recording"
-            tField = textField
+        if (self.nameTextField.text!.isEmpty) {
+            let alertController: UIAlertController = UIAlertController(title: "Name is Empty", message: "Please name your recording", preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
         }
         
-        func handleCancel(alertView: UIAlertAction!)
-        {
-            print("Cancelled !!")
-        }
-        
-        var alert = UIAlertController(title: "Name Your Recording", message: "", preferredStyle: .Alert)
-        
-        alert.addTextFieldWithConfigurationHandler(configurationTextField)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:handleCancel))
-        alert.addAction(UIAlertAction(title: "Done", style: .Default, handler:{ (UIAlertAction) in
-            print("Done !!")
-            var nameOfFile = alert.textFields![0].text
+        else {
             self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-            NSNotificationCenter.defaultCenter().postNotificationName("userClickOnSave", object: nameOfFile)
-            self.nameOfRecording = nameOfFile!
-            
+            self.performSegueWithIdentifier("name", sender: self)
+        }
+        
+//        var tField: UITextField!
+//        
+//        func configurationTextField(textField: UITextField!)
+//        {
+//            print("generating the TextField")
+//            textField.placeholder = "Name Your Recording"
+//            tField = textField
+//        }
+//        
+//        func handleCancel(alertView: UIAlertAction!)
+//        {
+//            print("Cancelled !!")
+//        }
+//        
+//        var alert = UIAlertController(title: "Name Your Recording", message: "", preferredStyle: .Alert)
+//        
+//        alert.addTextFieldWithConfigurationHandler(configurationTextField)
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler:handleCancel))
+//        alert.addAction(UIAlertAction(title: "Done", style: .Default, handler:{ (UIAlertAction) in
+//            print("Done !!")
+//            var nameOfFile = alert.textFields![0].text
+//            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+//            NSNotificationCenter.defaultCenter().postNotificationName("userClickOnSave", object: nameOfFile)
+//            self.nameOfRecording = nameOfFile!
+    
 //            URL: getFileURL()
 //            
 //            let path = NSTemporaryDirectory().stringByAppendingString("\(self.nameOfRecording).caf")
@@ -53,26 +66,26 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
 //            
 //            print("filePath is :\(filePath)")
             
-            let fileManager = NSFileManager.defaultManager()
+//            let fileManager = NSFileManager.defaultManager()
+//            
+//            // Copy 'hello.swift' to 'subfolder/hello.swift'
+//
+//            do {
+//                try fileManager.copyItemAtPath(NSTemporaryDirectory(), toPath: "\(self.nameOfRecording).caf")
+//
+//                print("new path: \(fileManager)")
+//            }
+//            catch let error as NSError {
+//                print("Ooops! Something went wrong: \(error)")
+//            }
             
-            // Copy 'hello.swift' to 'subfolder/hello.swift'
-            
-            do {
-                try fileManager.copyItemAtPath(NSTemporaryDirectory(), toPath: "\(self.nameOfRecording).caf")
-                
-                print("new path: \(fileManager)")
-            }
-            catch let error as NSError {
-                print("Ooops! Something went wrong: \(error)")
-            }
-            
-            
-            
-            print("Item : \(tField.text)")
-        }))
-        self.presentViewController(alert, animated: true, completion: {
-            print("completion block")
-        })
+//            
+//            
+//            print("Item : \(tField.text)")
+//        }))
+//        self.presentViewController(alert, animated: true, completion: {
+//            print("completion block")
+//        })
     }
     
     var soundRecorder: AVAudioRecorder!
@@ -152,15 +165,15 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         }
     }
     
-    //Get Current Date
-    let currentDate = NSDate()
-    
-    func compareTime() {
-    //Test Extensions in Log
-        NSLog("(Current Short Time String = \(currentDate.toShortTimeString()))")
-        print(currentDate.toShortTimeString)
-     
-    }
+//    //Get Current Date
+//    let currentDate = NSDate()
+//    
+//    func compareTime() {
+//    //Test Extensions in Log
+//    NSLog("(Current Short Time String = \(currentDate.toShortTimeString()))")
+//    print(currentDate.toShortTimeString)
+//    
+//    }
     
     // MARK:- Prepare AVPlayer
     
@@ -198,11 +211,13 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     func getFileURL() -> NSURL {
         
-        let path = NSTemporaryDirectory()
+//        let path = NSTemporaryDirectory().stringByAppendingString("\(nameTextField.text).caf")
+        let path = NSTemporaryDirectory().stringByAppendingString(".caf")
         print("path is :\(path)")
         let filePath = NSURL(fileURLWithPath: path)
     
         print("filePath is :\(filePath)")
+        
         return filePath
     }
     
@@ -236,12 +251,19 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     //Rename file with custom name
     
-    func copyItemAtPath(_ srcPath: String, toPath dstPath: String) throws {
-        
-    }
-    
+//    func copyItemAtPath(_ srcPath: String, toPath dstPath: String) throws {
+//        
+//    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "name" {
+            let soundTableViewController = segue.destinationViewController as! SoundTableViewController
+            
+            soundTableViewController.data.append(nameTextField.text!)
+        }
+        
+        
 //        if segue.identifier == "sound" {
 //            let soundTableViewController = segue.destinationViewController as! SoundTableViewController
 //            

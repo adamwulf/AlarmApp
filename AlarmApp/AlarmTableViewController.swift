@@ -8,14 +8,22 @@
 
 import UIKit
 import DZNEmptyDataSet
-import RealmSwift
 import AVFoundation
+import RealmSwift
 
 class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     
 //    let realm = try! Realm() {
 //        
 //    }
+//    
+    var alarms: Results<Alarm>! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    
 
     @IBOutlet weak var timePicker: UIDatePicker!
     
@@ -23,6 +31,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        alarms = RealmHelper.retrieveAlarms()
         //self.tableView.editing = true
         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
         //self.view?.backgroundColor = UIColor.blueColor()
@@ -36,6 +45,8 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
+        
+        alarms = RealmHelper.retrieveAlarms()
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,6 +95,8 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         cell.textLabel?.text = data[indexPath.row]
         
         
+        
+        
         // Configure the cell...
         return cell
 
@@ -97,6 +110,9 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
             
             tableView.reloadData()
         }
+        
+        RealmHelper.deleteAlarm(alarms[indexPath.row])
+        alarms = RealmHelper.retrieveAlarms()
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
@@ -146,7 +162,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
     
     @IBAction func test(sender: AnyObject) {
     
-        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: Selector("playAlarm"), userInfo: nil, repeats:true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(60.0, target: self, selector: Selector("playAlarm"), userInfo: nil, repeats:true)
     }
     
     var play: Bool = false
@@ -164,10 +180,16 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
             if timeString == alarm {
                 play = true
                 print ("time2: \(timeString)")
+                preparePlayer()
                 soundPlayer.play()
-                print("playing")
                 
-                //self.performSegueWithIdentifier("play", sender: self)
+                let alertController: UIAlertController = UIAlertController(title: "Name is Empty", message: "Please name your recording", preferredStyle: UIAlertControllerStyle.Alert)
+                let okAction = UIAlertAction(title: "Stop Alarm", style: UIAlertActionStyle.Default, handler: nil)
+                alertController.addAction(okAction)
+               // alertController.addAction(soundPlayer.stop())
+                presentViewController(alertController, animated: true, completion: nil)
+                
+                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
             }
         
         }

@@ -2,6 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Alarm.swift">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "New Group">
+   </Group>
+   <FileRef
       location = "group:RealmHelper.swift">
    </FileRef>
    <FileRef

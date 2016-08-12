@@ -6,6 +6,7 @@
 //
 //
 
+
 import Foundation
 import RealmSwift
 
@@ -18,16 +19,16 @@ class RealmHelper {
         }
     }
     
-    static func deleteNote(note: Alarm){
+    static func deleteAlarm(alarm: Alarm){
         let realm = try! Realm()
         try! realm.write(){
-            realm.delete(note)
+            realm.delete(alarm)
         }
     }
     
-    static func retrieveNotes() -> Results<Alarm> {
+    static func retrieveAlarms() -> Results<Alarm> {
         let realm = try! Realm()
-        return realm.objects(Alarm).sorted("modificationTime", ascending: false)
+        return realm.objects(Alarm)//.sorted(time as! NSDate(), ascending: true)
     }
     
 }

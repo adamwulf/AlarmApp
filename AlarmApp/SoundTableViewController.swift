@@ -16,15 +16,15 @@ class SoundTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SoundTableViewController.userClickOnSave(_:)), name: "userClickOnSave", object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SoundTableViewController.userClickOnSave(_:)), name: "userClickOnSave", object: nil)
         self.tableView?.backgroundColor = UIColor.whiteColor()
     }
     
-    func userClickOnSave(notification:NSNotification){
-        let object = notification.object as! String
-        self.data.append(object)
-        self.tableView.reloadData()
-    }
+//    func userClickOnSave(notification:NSNotification){
+//        let object = notification.object as! String
+//        self.data.append(object)
+//        self.tableView.reloadData()
+//    }
     
     
     var data = [String]()
@@ -54,14 +54,50 @@ class SoundTableViewController: UITableViewController {
         }
     }
     
+    //Set-up AudioPlayer
+    var soundPlayer: AVAudioPlayer!
+    
+    func preparePlayer() {
+        var error: NSError?
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOfURL: getFileURL())
+        } catch let error1 as NSError {
+            error = error1
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            //soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 1.0
+        }
+    }
+    
+    func getFileURL() -> NSURL {
+        
+        let path = NSTemporaryDirectory().stringByAppendingString(".caf")
+        print("path is :\(path)")
+        let filePath = NSURL(fileURLWithPath: path)
+        
+        print("filePath is :\(filePath)")
+        return filePath
+    }
+    
+    
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         NSLog("You selected: \(data[indexPath.row])!")
+        print("playing")
+        soundPlayer.prepareToPlay()
+        soundPlayer.play()
         //self.performSegueWithIdentifier("yourIdentifier", sender: self)
     }
     
-//    @IBAction func unwindToAlarmTableViewController(segue: UIStoryboardSegue) {
-//        
-//    }
+    
+    
+    @IBAction func unwindToSoundTableViewController(segue: UIStoryboardSegue) {
+        
+    }
 
 }
 

@@ -72,13 +72,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-Eg-xDt">
-                                <rect key="frame" x="35" y="64" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="8PD-sf-YAf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-YX-uBt">
                                 <rect key="frame" x="270" y="340" width="72" height="30"/>
                                 <state key="normal" title="Add Alarm"/>
@@ -95,14 +88,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="top" secondItem="lbk-iq-kXz" secondAttribute="bottom" constant="25" id="CDK-C1-gjS"/>
                             <constraint firstItem="ih0-YX-uBt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="Jwg-sJ-nSM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FDM-oc-Lw3" secondAttribute="trailing" constant="10" id="Ox0-ym-ygB"/>
-                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="top" secondItem="lbk-iq-kXz" secondAttribute="bottom" constant="10" id="fiS-OO-Ek7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ih0-YX-uBt" secondAttribute="trailing" constant="10" id="tXe-0L-D2Y"/>
                             <constraint firstItem="ih0-YX-uBt" firstAttribute="top" secondItem="FDM-oc-Lw3" secondAttribute="bottom" constant="22" id="tls-rT-CcY"/>
                             <constraint firstItem="FDM-oc-Lw3" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="vxt-7I-wEn"/>
-                            <constraint firstItem="JCP-Eg-xDt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="wOP-Wq-YFp"/>
                         </constraints>
                     </view>
                     <connections>
@@ -128,32 +118,11 @@
                     <connections>
                         <segue destination="Bb6-5J-M2f" kind="relationship" relationship="viewControllers" id="pyt-Mm-wOs"/>
                         <segue destination="sK6-Fn-JRx" kind="relationship" relationship="viewControllers" id="Xt1-4V-K2b"/>
-                        <segue destination="DWa-KO-HUf" kind="relationship" relationship="viewControllers" id="5Uv-VQ-hqN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="-608"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="7Vx-TO-haP">
-            <objects>
-                <viewController title="Settings" id="DWa-KO-HUf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9iu-sX-6Wb"/>
-                        <viewControllerLayoutGuide type="bottom" id="EAW-Di-P1u"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fm2-aE-XL5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="first" selectedImage="first" id="r7s-At-fBX"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gdf-d0-p8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-288" y="255"/>
         </scene>
         <!--Sounds-->
         <scene sceneID="eC9-cC-k3q">
@@ -169,7 +138,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <state key="normal" title="New Sound"/>
                             <connections>
-                                <segue destination="Lk6-Kj-4He" kind="show" id="4cE-EM-TQn"/>
+                                <segue destination="Lk6-Kj-4He" kind="show" identifier="" id="4cE-EM-TQn"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -189,9 +158,6 @@
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="hbc-Ff-wSF" kind="unwind" identifier="play" unwindAction="unwindToAlarmTableViewController:" id="hbB-BW-DJp"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -204,7 +170,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ig1-tv-Wb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="hbc-Ff-wSF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="525" y="255"/>
         </scene>
@@ -228,7 +193,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-4n-2Qw">
-                                <rect key="frame" x="143" y="302" width="325" height="229"/>
+                                <rect key="frame" x="143" y="185" width="325" height="229"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start Recording"/>
                                 <connections>
@@ -242,8 +207,22 @@
                                     <action selector="saveRecording:" destination="Lk6-Kj-4He" eventType="touchUpInside" id="ArT-yI-DBu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKQ-VC-GzD">
+                                <rect key="frame" x="257" y="125" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <segue destination="prA-Wt-vBg" kind="unwind" identifier="name" unwindAction="unwindToSoundTableViewController:" id="gFZ-ge-Ph7"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Recording Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGa-Dt-Z1z">
+                                <rect key="frame" x="241" y="89" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv8-ga-xre">
-                                <rect key="frame" x="250" y="486" width="103" height="30"/>
+                                <rect key="frame" x="249" y="341" width="103" height="30"/>
                                 <state key="normal" title="Play Recording"/>
                                 <connections>
                                     <action selector="playSound:" destination="Lk6-Kj-4He" eventType="touchUpInside" id="bVh-Ht-fOQ"/>
@@ -253,22 +232,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vv8-ga-xre" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="4WO-10-x0N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WKQ-VC-GzD" secondAttribute="trailing" constant="25" id="6md-XP-IQH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JKc-wq-NYP" secondAttribute="trailing" constant="25" id="89Y-0O-gWV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vv8-ga-xre" secondAttribute="trailing" constant="25" id="AeW-6x-yLr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qIg-4n-2Qw" secondAttribute="trailing" constant="25" id="GNt-ye-Qe2"/>
                             <constraint firstItem="JKc-wq-NYP" firstAttribute="top" secondItem="cH6-d0-MVf" secondAttribute="bottom" constant="25" id="GuM-XF-FuX"/>
+                            <constraint firstItem="WKQ-VC-GzD" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="JNU-5L-Xw7"/>
                             <constraint firstItem="qIg-4n-2Qw" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="QYH-k1-Cyo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qGa-Dt-Z1z" secondAttribute="trailing" constant="25" id="dv4-Fy-TIf"/>
                             <constraint firstItem="eZI-YO-6tU" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="15" id="rlK-Us-kiJ"/>
+                            <constraint firstItem="qGa-Dt-Z1z" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="w9n-dR-SUR"/>
                             <constraint firstItem="eZI-YO-6tU" firstAttribute="top" secondItem="cH6-d0-MVf" secondAttribute="bottom" constant="15" id="zcm-6d-jMI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nameTextField" destination="WKQ-VC-GzD" id="Bp3-36-Gff"/>
                         <outlet property="playButton" destination="JKc-wq-NYP" id="yhH-RU-AZ1"/>
                         <outlet property="recordButton" destination="qIg-4n-2Qw" id="wTc-Nm-Dey"/>
                         <outlet property="saveButton" destination="JKc-wq-NYP" id="fSR-gb-8d1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyD-pp-JWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="prA-Wt-vBg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1313" y="255"/>
         </scene>
@@ -279,6 +264,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="3Yh-Pv-bNd"/>
         <segue reference="ADL-2u-7ul"/>
-        <segue reference="8PD-sf-YAf"/>
+        <segue reference="ayU-Bi-PEB"/>
     </inferredMetricsTieBreakers>
 </document>

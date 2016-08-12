@@ -9,6 +9,9 @@
 import UIKit
 
 class SelectTimeViewController: UIViewController {
+    
+    var alarm: Alarm?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor.blueColor()
@@ -25,6 +28,10 @@ class SelectTimeViewController: UIViewController {
             let timeString = NSDateFormatter.localizedStringFromDate(timePicker.date, dateStyle: .NoStyle, timeStyle: .ShortStyle)
             alarmTableViewController.data.append(timeString)
             alarmTableViewController.tableView.reloadData()
+            
+            if let alarm = alarm {
+                let newAlarm = Alarm()
+                newAlarm.time = timeString
         }
             
             
@@ -40,5 +47,5 @@ class SelectTimeViewController: UIViewController {
             }
         }*/
     }
-    
+    }
 }

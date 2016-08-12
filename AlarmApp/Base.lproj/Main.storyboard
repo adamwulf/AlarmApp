@@ -86,7 +86,6 @@
                                 </date>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ih0-YX-uBt" firstAttribute="leading" secondItem="57e-zf-81B" secondAttribute="leadingMargin" constant="10" id="Jwg-sJ-nSM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FDM-oc-Lw3" secondAttribute="trailing" constant="10" id="Ox0-ym-ygB"/>
@@ -192,14 +191,6 @@
                                     <segue destination="49e-Tb-3d3" kind="show" id="ayU-Bi-PEB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-4n-2Qw">
-                                <rect key="frame" x="143" y="185" width="325" height="229"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Start Recording"/>
-                                <connections>
-                                    <action selector="recordSound:" destination="Lk6-Kj-4He" eventType="touchUpInside" id="sqb-ok-3xz"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKc-wq-NYP">
                                 <rect key="frame" x="527" y="28" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
@@ -221,20 +212,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv8-ga-xre">
-                                <rect key="frame" x="249" y="341" width="103" height="30"/>
-                                <state key="normal" title="Play Recording"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-4n-2Qw">
+                                <rect key="frame" x="143" y="185" width="325" height="229"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Start Recording"/>
                                 <connections>
-                                    <action selector="playSound:" destination="Lk6-Kj-4He" eventType="touchUpInside" id="bVh-Ht-fOQ"/>
+                                    <action selector="recordSound:" destination="Lk6-Kj-4He" eventType="touchUpInside" id="sqb-ok-3xz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vv8-ga-xre" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="4WO-10-x0N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WKQ-VC-GzD" secondAttribute="trailing" constant="25" id="6md-XP-IQH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JKc-wq-NYP" secondAttribute="trailing" constant="25" id="89Y-0O-gWV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vv8-ga-xre" secondAttribute="trailing" constant="25" id="AeW-6x-yLr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qIg-4n-2Qw" secondAttribute="trailing" constant="25" id="GNt-ye-Qe2"/>
                             <constraint firstItem="JKc-wq-NYP" firstAttribute="top" secondItem="cH6-d0-MVf" secondAttribute="bottom" constant="25" id="GuM-XF-FuX"/>
                             <constraint firstItem="WKQ-VC-GzD" firstAttribute="leading" secondItem="r5b-vM-shb" secondAttribute="leadingMargin" constant="25" id="JNU-5L-Xw7"/>
@@ -247,9 +236,8 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="WKQ-VC-GzD" id="Bp3-36-Gff"/>
-                        <outlet property="playButton" destination="JKc-wq-NYP" id="yhH-RU-AZ1"/>
                         <outlet property="recordButton" destination="qIg-4n-2Qw" id="wTc-Nm-Dey"/>
-                        <outlet property="saveButton" destination="JKc-wq-NYP" id="fSR-gb-8d1"/>
+                        <outlet property="saveButton" destination="JKc-wq-NYP" id="gaU-pE-jKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyD-pp-JWm" userLabel="First Responder" sceneMemberID="firstResponder"/>

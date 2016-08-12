@@ -30,5 +30,10 @@ class RealmHelper {
         let realm = try! Realm()
         return realm.objects(Alarm)//.sorted(time as! NSDate(), ascending: true)
     }
-    
+    static func updateAlarm(oldAlarm: Alarm, newAlarm: Alarm){
+        let realm = try! Realm()
+        try! realm.write(){
+            oldAlarm.time = newAlarm.time
+        }
+    }
 }

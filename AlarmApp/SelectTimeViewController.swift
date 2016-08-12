@@ -14,7 +14,7 @@ class SelectTimeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     var time: String = ""
@@ -26,13 +26,16 @@ class SelectTimeViewController: UIViewController {
         if segue.identifier == "time" {
             let alarmTableViewController = segue.destinationViewController as! AlarmTableViewController
             let timeString = NSDateFormatter.localizedStringFromDate(timePicker.date, dateStyle: .NoStyle, timeStyle: .ShortStyle)
-            alarmTableViewController.data.append(timeString)
+//            alarmTableViewController.data.append(timeString)
             alarmTableViewController.tableView.reloadData()
             
-            if let alarm = alarm {
+//            if let alarm = alarm {
                 let newAlarm = Alarm()
                 newAlarm.time = timeString
-        }
+//                RealmHelper.addAlarm()
+                RealmHelper.addAlarm(newAlarm)
+                
+//        }
             
             
            /* else {

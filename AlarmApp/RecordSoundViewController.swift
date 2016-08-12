@@ -14,8 +14,11 @@ import RealmSwift
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
+    
     @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var playButton: UIButton!
+
     @IBOutlet weak var nameTextField: UITextField!
     
     var nameOfRecording: String = ""
@@ -101,6 +104,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         setupRecorder()
         saveButton.enabled = false
         playButton.enabled = false
+        self.view.backgroundColor = UIColor.whiteColor()
     }
     
     
@@ -118,19 +122,19 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         }
     }
     
-    
-    @IBAction func playSound(sender: UIButton) {
-        if (sender.titleLabel?.text == "Play Recording"){
-            //recordButton.enabled = false
-            sender.setTitle("Stop Playing", forState: .Normal)
-            preparePlayer()
-            soundPlayer.play()
-        } else {
-            soundPlayer.stop()
-            sender.setTitle("Play Recording", forState: .Normal)
-        }
-    }
-    
+//    
+//    @IBAction func playSound(sender: UIButton) {
+//        if (sender.titleLabel?.text == "Play Recording"){
+//            //recordButton.enabled = false
+//            sender.setTitle("Stop Playing", forState: .Normal)
+//            preparePlayer()
+//            soundPlayer.play()
+//        } else {
+//            soundPlayer.stop()
+//            sender.setTitle("Play Recording", forState: .Normal)
+//        }
+//    }
+//    
     // MARK:- AVRecorder Setup
     
     func setupRecorder() {
@@ -225,7 +229,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         recordButton.enabled = true
-        playButton.setTitle("Play Recording", forState: .Normal)
+        //playButton.setTitle("Play Recording", forState: .Normal)
     }
     
     func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
@@ -236,7 +240,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         playButton.enabled = true
-        recordButton.setTitle("Start Recording", forState: .Normal)
+       // recordButton.setTitle("Start Recording", forState: .Normal)
     }
     
     func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder, error: NSError?) {
@@ -260,7 +264,7 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate, AVAu
         if segue.identifier == "name" {
             let soundTableViewController = segue.destinationViewController as! SoundTableViewController
             
-            soundTableViewController.data.append(nameTextField.text!)
+            //soundTableViewController.data.append(nameTextField.text!)
         }
         
         

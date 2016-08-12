@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let themeColor = UIColor(red : 0.25, green: 0.41, blue: 0.75, alpha: 1.0)
+let themeColor = UIColor(red:0.00, green:0.33, blue:1.00, alpha:0.5)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //window?.tintColor = themeColor
+        window?.tintColor = themeColor
         return true
     }
 

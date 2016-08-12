@@ -49,6 +49,12 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         alarms = RealmHelper.retrieveAlarms()
     }
     
+    //instead of reloading alrams from Realm, you can use Realm notification token to reload and retrie
+    override func viewWillAppear(animated: Bool) {
+        self.alarms = RealmHelper.retrieveAlarms()
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -83,16 +89,19 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
 //    }
     
     
-    var data = [String]()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        if alarms == nil {
+            return 0
+        } else {
+            return alarms.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AlarmCell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = alarms[indexPath.row].time
         
         
         
@@ -106,7 +115,7 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         
         if editingStyle == .Delete {
             
-            data.removeAtIndex(indexPath.row)
+            //logic here is not complete.still need to delete the object from alarms array which is in memory.
             
             tableView.reloadData()
         }
@@ -173,19 +182,22 @@ class AlarmTableViewController: UITableViewController, DZNEmptyDataSetSource, DZ
         
         print ("time: \(NSDate())")
         
-        for alarm in data {
+        for alarm in alarms {
             
             play = false
             print (alarm)
-            if timeString == alarm {
+            if timeString == alarm.time {
                 play = true
                 print ("time2: \(timeString)")
                 preparePlayer()
                 soundPlayer.play()
                 
-                let alertController: UIAlertController = UIAlertController(title: "Name is Empty", message: "Please name your recording", preferredStyle: UIAlertControllerStyle.Alert)
-                let okAction = UIAlertAction(title: "Stop Alarm", style: UIAlertActionStyle.Default, handler: nil)
-                alertController.addAction(okAction)
+                let alertController: UIAlertController = UIAlertController(title: "Alarm is Sounding", message: "Press the button to stop alarm", preferredStyle: UIAlertControllerStyle.Alert)
+                let stopAction = UIAlertAction(title: "Stop Alarm", style: .Default) { (action:UIAlertAction) in
+                    self.soundPlayer.stop()
+                }
+                alertController.addAction(stopAction)
+
                // alertController.addAction(soundPlayer.stop())
                 presentViewController(alertController, animated: true, completion: nil)
                 

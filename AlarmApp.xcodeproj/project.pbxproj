@@ -11,7 +11,6 @@
 		0F3EE8491D343B1500484614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE8481D343B1500484614 /* AppDelegate.swift */; };
 		0F3EE84D1D343B1500484614 /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */; };
 		0F3EE8501D343B1500484614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE84E1D343B1500484614 /* Main.storyboard */; };
-		0F3EE8521D343B1500484614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE8511D343B1500484614 /* Assets.xcassets */; };
 		0F3EE8551D343B1500484614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3EE8531D343B1500484614 /* LaunchScreen.storyboard */; };
 		0F3EE8601D343B1500484614 /* AlarmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE85F1D343B1500484614 /* AlarmAppTests.swift */; };
 		0F3EE86B1D343B1500484614 /* AlarmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3EE86A1D343B1500484614 /* AlarmAppUITests.swift */; };
@@ -22,6 +21,9 @@
 		0FD9EC0A1D468BBD00B1471F /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD9EC091D468BBD00B1471F /* clock.png */; };
 		0FD9EC0C1D46D4DB00B1471F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD9EC0B1D46D4DA00B1471F /* AVFoundation.framework */; };
 		0FD9EC0E1D46DD1900B1471F /* RecordSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */; };
+		0FDCC8181D5E71700033ABDC /* AlarmAppIcon2.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC8171D5E71700033ABDC /* AlarmAppIcon2.sketch */; };
+		0FDCC81C1D5E72540033ABDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC81B1D5E72540033ABDC /* Assets.xcassets */; };
+		0FDCC81E1D5E7B9F0033ABDC /* Screen Shot 2016-08-12 at 2.43.37 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FDCC81D1D5E7B9F0033ABDC /* Screen Shot 2016-08-12 at 2.43.37 PM.png */; };
 		0FF8CA841D5C081900560262 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF8CA831D5C081900560262 /* RealmHelper.swift */; };
 		0FF8CA8D1D5C705000560262 /* AlarmAppIcon.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 0FF8CA8C1D5C705000560262 /* AlarmAppIcon.sketch */; };
 		5A5B523225CFB1F4BF742874 /* Pods_AlarmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B13F64AFFD1B88B93445A9 /* Pods_AlarmAppUITests.framework */; };
@@ -55,7 +57,6 @@
 		0F3EE8481D343B1500484614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F3EE84C1D343B1500484614 /* SoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		0F3EE84F1D343B1500484614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0F3EE8511D343B1500484614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3EE8541D343B1500484614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F3EE8561D343B1500484614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F3EE85B1D343B1500484614 /* AlarmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +74,9 @@
 		0FD9EC091D468BBD00B1471F /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock.png; path = ../../../clock.png; sourceTree = "<group>"; };
 		0FD9EC0B1D46D4DA00B1471F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSoundViewController.swift; sourceTree = "<group>"; };
+		0FDCC8171D5E71700033ABDC /* AlarmAppIcon2.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; name = AlarmAppIcon2.sketch; path = ../../../AlarmAppIcon2.sketch; sourceTree = "<group>"; };
+		0FDCC81B1D5E72540033ABDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FDCC81D1D5E7B9F0033ABDC /* Screen Shot 2016-08-12 at 2.43.37 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2016-08-12 at 2.43.37 PM.png"; path = "../../../Screen Shot 2016-08-12 at 2.43.37 PM.png"; sourceTree = "<group>"; };
 		0FF8CA831D5C081900560262 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmHelper.swift; path = ../RealmHelper.swift; sourceTree = "<group>"; };
 		0FF8CA8C1D5C705000560262 /* AlarmAppIcon.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; name = AlarmAppIcon.sketch; path = ../../../AlarmAppIcon.sketch; sourceTree = "<group>"; };
 		22AEBD8347A58C79668CB2BD /* Pods-AlarmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarmAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlarmAppUITests/Pods-AlarmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +159,9 @@
 				0FD9EC0D1D46DD1900B1471F /* RecordSoundViewController.swift */,
 				0F3EE84E1D343B1500484614 /* Main.storyboard */,
 				0F4056C91D52978600FB59C3 /* AlarmAppSoundIcon.png */,
-				0F3EE8511D343B1500484614 /* Assets.xcassets */,
+				0FDCC8171D5E71700033ABDC /* AlarmAppIcon2.sketch */,
+				0FDCC81B1D5E72540033ABDC /* Assets.xcassets */,
+				0FDCC81D1D5E7B9F0033ABDC /* Screen Shot 2016-08-12 at 2.43.37 PM.png */,
 				0FF8CA8C1D5C705000560262 /* AlarmAppIcon.sketch */,
 				0F3EE8531D343B1500484614 /* LaunchScreen.storyboard */,
 				0F3EE8561D343B1500484614 /* Info.plist */,
@@ -343,11 +349,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FDCC81E1D5E7B9F0033ABDC /* Screen Shot 2016-08-12 at 2.43.37 PM.png in Resources */,
 				0FD9EC0A1D468BBD00B1471F /* clock.png in Resources */,
+				0FDCC8181D5E71700033ABDC /* AlarmAppIcon2.sketch in Resources */,
 				0F3EE8551D343B1500484614 /* LaunchScreen.storyboard in Resources */,
 				0FF8CA8D1D5C705000560262 /* AlarmAppIcon.sketch in Resources */,
-				0F3EE8521D343B1500484614 /* Assets.xcassets in Resources */,
 				0F4056CA1D52978600FB59C3 /* AlarmAppSoundIcon.png in Resources */,
+				0FDCC81C1D5E72540033ABDC /* Assets.xcassets in Resources */,
 				0F3EE8501D343B1500484614 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
